@@ -63,9 +63,9 @@ function loadEvent(){
                 <h1>_01</h1>
             </div>
 
-            <div class="floater reveal">
-                <h1>EX<span>&#183;</span>CLU <span>&#183;</span>SION</h1>
-                <p>THE DELIBERATE ACT OF LEAVING SOMEONE OUT. MAIN CASES: EXCLUDED FROM FRIENDS' PARTIES, ACTIVITIES, CONVERSATION.</p>
+            <div class="floater ">
+                <h1 class ="reveal">EX<span>&#183;</span>CLU <span>&#183;</span>SION</h1>
+                <p class ="reveal2">THE DELIBERATE ACT OF LEAVING SOMEONE OUT. MAIN CASES: EXCLUDED FROM FRIENDS' PARTIES, ACTIVITIES, CONVERSATION.</p>
             </div>
 
             <footer>
@@ -74,9 +74,9 @@ function loadEvent(){
                 <div class="socials">
                     <p2>_SHARE IT</p2>
                     <div class="links">
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-whatsapp"></a>
+                        <a href="#" class="fa fa-twitter" target="_blank"><img class="socialicon" src="facebook.png"></a>
+                        <a href="#" class="fa fa-facebook"><img class="socialicon" src="instagram.png"></a>
+                        <a href="#" class="fa fa-whatsapp"><img class="socialicon" src="twitter.png"></a>
                     </div>
                 </div>
             </footer>
@@ -86,24 +86,44 @@ function loadEvent(){
     }
     pageLoad();
 
-    
+
+    // 1st Page title float-in for scrolling
     function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
+        var reveals = document.querySelectorAll(".reveal");     //reveal class added to h1 tag
       
         for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;        //returns the height of a window's content area (read only property)
+          var elementTop = reveals[i].getBoundingClientRect().top;  //returns the size of an element and its position relative to the viewport
           var elementVisible = 150;
       
           if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-          } else {
+            } else {
             reveals[i].classList.remove("active");
-          }
+            }
         }
-      }
+    }
+    window.addEventListener("scroll", reveal);
       
-      window.addEventListener("scroll", reveal);
+
+    // 2nd Page title float-in for scrolling
+    function reveal2() {
+        var reveals2 = document.querySelectorAll(".reveal2");
+      
+        for (var i = 0; i < reveals2.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals2[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+      
+          if (elementTop < windowHeight - elementVisible) {
+            reveals2[i].classList.add("active");
+            } else {
+            reveals2[i].classList.remove("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal2);
+      
 
 
 }
