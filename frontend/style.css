@@ -1,0 +1,153 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+outline: none;
+box-sizing: border-box;
+background: transparent;
+font-family: inherit;
+}
+a{
+text-decoration: none;
+}
+a img {
+border: none;
+}
+
+button,
+a {
+cursor: pointer;
+color: inherit;
+}
+
+textarea {
+resize: none;
+}
+
+button,
+textarea,
+select {
+appearance: none !important;
+border-radius: 0;
+}
+
+/*---------------------------idáig tart a CSS reset-------------------------------*/
+
+#container1{
+    width: 100%;
+    height: 100vh;
+    background-image: url("bg-01.jpg");
+    background-size: cover;
+    display:grid;
+    grid-template: "nav nav" 
+                   "main main";
+    grid-template-rows: 13% 87%;
+    font-family: 'Hammersmith One', sans-serif;
+    text-transform: uppercase;
+}
+
+/*---------------------------idáig tart a container1-------------------------------*/
+
+nav{
+    width:96%;
+    height: 100%;
+    grid-area: nav;
+    display:flex;
+    justify-content: end;
+    font-size: 15px;
+    color: white;
+    align-items: center;
+}
+
+nav a{
+    padding: 0px 10px;
+    text-decoration: underline;
+}
+
+nav button{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+
+.button1{
+    border-left:solid 3px rgb(5, 177, 177);
+}
+
+.button1:hover{
+    text-decoration: underline;
+}
+
+.button2:hover{
+    text-decoration: underline;
+}
+
+/*---------------------------idáig tart a navigáció-------------------------------*/
+
+#main{
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    flex-direction: row;
+    display:flex;
+    position: relative;
+    grid-area: main;
+    justify-content: row;
+}
+
+/*--Imgp--*/
+
+.imgp{
+    width:65%;
+    height: 100%;
+}
+
+.imgp img{
+    width: 50%;
+    height: auto;
+    margin-left: 5%; 
+}
+
+.imgp p{
+    width: 70%;
+    height: auto;
+    color: white;
+    font-size: 20px;
+    margin-left: 8%;
+    line-height: 30px;
+}
+
+.p2{
+    padding-top: 3%;
+}
+
+/*--Arrow--*/
+
+.aniarrow {
+   justify-content: center;
+   align-items: baseline;
+}
+
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 20px;}
+    100% {bottom: 0;}
+}
+
+.arrow {
+    animation: bouncing 1.5s infinite ease-in-out;
+    bottom: 0%;
+    display: block;
+    height: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: fixed;
+    z-index: +100;
+}
+
+/*--Form--*/
+
+.form{
+    width:50%;
+    height:100%;
+}
