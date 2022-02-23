@@ -1,8 +1,8 @@
-function loadEvent(){
+// function loadEvent(){
 
-window.onload = function(){
-    document.getElementById("form").Value = "";
-   }
-}
+// window.onload = function(){
+//     document.getElementById("form").Value = "";
+//    }
+// }
 
-window.addEventListener('load', loadEvent);
+// window.addEventListener('load', loadEvent);
