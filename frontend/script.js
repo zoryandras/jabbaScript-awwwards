@@ -5,6 +5,12 @@ function loadEvent(){
 
         let rootElement = document.getElementById("root");
         rootElement.insertAdjacentHTML("afterbegin", `
+        <div class="loader">
+            <img src="load.gif">
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+        </div>
         <section id="container1">
                 <nav>
                     <a href="">types of cyberbullying</a>
@@ -39,7 +45,7 @@ function loadEvent(){
                         <input placeholder="abuser's phone number" type="text" title="Please add a valid number so we can reach you!" required>
                         <label for="chooseFile">Please, share some evidence of the abuse <br> so we can help you better!</label>
                         <input type="file" name="chooseFile" id="chooseFile">			  
-                        <!-- <p>Please, share some evidence of the abuse so we can help you better!</p>
+                        <!-- <p>Please, share some evidence of the abuse so we can help you better! </p>
                         <input type="file" placeholder="Max 10MB"> -->
                         <button>Report the abuse</button>
                     </form>
@@ -57,7 +63,7 @@ function loadEvent(){
                 <h1>_01</h1>
             </div>
 
-            <div class="floater">
+            <div class="floater reveal">
                 <h1>EX<span>&#183;</span>CLU <span>&#183;</span>SION</h1>
                 <p>THE DELIBERATE ACT OF LEAVING SOMEONE OUT. MAIN CASES: EXCLUDED FROM FRIENDS' PARTIES, ACTIVITIES, CONVERSATION.</p>
             </div>
@@ -67,9 +73,11 @@ function loadEvent(){
                 
                 <div class="socials">
                     <p2>_SHARE IT</p2>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-whatsapp"></a>
+                    <div class="links">
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-whatsapp"></a>
+                    </div>
                 </div>
             </footer>
 
@@ -77,5 +85,26 @@ function loadEvent(){
         `)
     }
     pageLoad();
+
+    
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+      
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+      
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+      
+      window.addEventListener("scroll", reveal);
+
+
 }
 window.addEventListener("load", loadEvent);
