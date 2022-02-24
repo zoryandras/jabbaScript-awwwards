@@ -74,9 +74,9 @@ function loadEvent(){
                 <div class="socials">
                     <p2>_SHARE IT</p2>
                     <div class="links">
-                        <a href="#" class="fa fa-twitter" target="_blank"><img class="socialicon" src="facebook.png"></a>
-                        <a href="#" class="fa fa-facebook"><img class="socialicon" src="instagram.png"></a>
-                        <a href="#" class="fa fa-whatsapp"><img class="socialicon" src="twitter.png"></a>
+                        <img class="socialicon" src="facebook.png"></a>
+                        <img class="socialicon" src="instagram.png"></a>
+                        <img class="socialicon" src="twitter.png"></a>
                     </div>
                 </div>
             </footer>
